@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.navigation {
+    background-color: pink;
+}
+
+.navigation>.container {
+    max-width: 90%;
+    margin: auto;
+}
+
+.navigation .navbar {
+    position: relative;
+}
+
+.navigation .navbar .logo-toggle-container {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+}
+
+.navigation .navbar .logo-toggle-container a {
+    display: block;
+}
+
+.navigation .navbar .logo-toggle-container a img {
+    width: 120px;
+}
+
+.navigation .menu {
+    text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+    .navigation .menu {
+        display: block !important;
+        height: auto !important;
+    }
+}
+
+.navigation .menu li {
+    display: inline-block;
+    padding: 43px 10px;
+}
+
+.navigation .menu li a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #333;
+    font-size: 16px;
+}
+
+.navigation .menu li:nth-child(1),
+.navigation .menu li:nth-child(2),
+.navigation .menu li:nth-child(3) {
+    float: left;
+}
+
+.navigation .menu li:hover a {
+    background-color: white;
+    color: pink;
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 767px) {
+    .navigation .navbar .logo-toggle-container {
+        position: static;
+        transform: translateX(0%);
+    }
+    .navigation .navbar .logo-toggle-container a {
+        width: 80%;
+    }
+    .navigation .navbar .logo-toggle-container .toggle-box {
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        display: block;
+        width: 30px;
+        background: #000;
+        padding: 15px 9px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .navigation .navbar .logo-toggle-container .toggle-box span {
+        display: block;
+        max-width: 90%;
+        margin: auto;
+        height: 2px;
+        background-color: #fff;
+        margin-bottom: 4px;
+    }
+    .navigation .navbar .logo-toggle-container .toggle-box span:last-child {
+        margin-bottom: 0;
+    }
+    .navigation .menu {
+        text-align: center;
+        display: none;
+    }
+    .navigation .menu li {
+        display: block;
+        float: none !important;
+        padding: 0 10px;
+        border-bottom: 1px solid #ccc;
+    }
+}   
+
+.navigation .menu li:hover {
+    background-color: pink;
+    color: white;
+}
